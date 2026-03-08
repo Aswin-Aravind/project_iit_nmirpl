@@ -7,7 +7,8 @@
 
 .laser-char {
     display: inline;
-    white-space: pre;
+    white-space: pre-wrap;
+    /* Crucial: Allows the text to break onto new lines on small screens */
     transition: color 0.3s ease;
     z-index: 5;
     position: relative;

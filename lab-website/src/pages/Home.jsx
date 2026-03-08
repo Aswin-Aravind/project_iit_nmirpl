@@ -17,7 +17,9 @@ export default function Home() {
             <section className="hero">
                 <div className="hero-overlay"></div>
                 <div className="container hero-content">
-                    <h1 className="hero-title"><LaserTitle text="Near and Mid-IR Photonics Laboratory" /></h1>
+                    <h1 className="hero-title">
+                        <LaserTitle text="Near and Mid-IR Photonics&#10;Laboratory" />
+                    </h1>
                     <p className="hero-tagline">Advancing the frontiers of fiber lasers, mid-IR optics, and photonic sensors at IIT Delhi.</p>
                     <div className="hero-actions">
                         <Link to="/research" className="btn-primary">Explore Our Research <ArrowRight size={18} /></Link>

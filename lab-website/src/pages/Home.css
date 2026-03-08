@@ -178,6 +178,11 @@
         margin-top: 40px;
     }
 
+    /* Force line break on mobile for the hero title */
+    .mobile-break {
+        display: block;
+    }
+
     .hero {
         height: auto;
         padding: 140px 0 80px 0;
