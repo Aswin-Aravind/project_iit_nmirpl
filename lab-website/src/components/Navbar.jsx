@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import logoImg from '../assets/logo.png';
@@ -15,63 +15,64 @@ const navLinks = [
 ];
 
 export default function Navbar() {
-    const [isOpen, setIsOpen] = useState(false);
-    const [scrolled, setScrolled] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
     const location = useLocation();
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setScrolled(window.scrollY > 20);
-        };
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    const closeMenu = () => setMenuOpen(false);
+    const toggleMenu = () => setMenuOpen(prev => !prev);
 
     return (
-        <nav className={`navbar glass-panel ${scrolled ? 'nav-scrolled' : ''}`}>
-            <div className="container navbar-container">
-                <Link to="/" className="navbar-brand">
-                    <div className="logo-container">
-                        <img src={logoImg} alt="NMIRPL Logo" className="navbar-logo" />
-                    </div>
+        <header className="site-header">
+            {/* Top bar */}
+            <div className="header-bar">
+                <Link to="/" className="header-logo-link" onClick={closeMenu}>
+                    <img src={logoImg} alt="NMIRPL Logo" className="header-logo" />
                 </Link>
 
-                {/* Desktop Menu */}
-                <div className="nav-links desktop-only">
-                    {navLinks.map((link) => (
+                {/* Desktop links */}
+                <nav className="desktop-nav">
+                    {navLinks.map(link => (
                         <Link
                             key={link.name}
                             to={link.path}
-                            className={`nav-link ${location.pathname === link.path ? 'active' : ''}`}
+                            className={`nav-link${location.pathname === link.path ? ' active' : ''}`}
                         >
                             {link.name}
                         </Link>
                     ))}
-                    <Link to="/contact" className="btn-primary" style={{ marginLeft: '16px' }}>Contact</Link>
-                </div>
+                    <Link to="/contact" className="btn-primary contact-btn">Contact</Link>
+                </nav>
 
-                {/* Mobile Toggle */}
-                <button className="mobile-toggle" onClick={() => setIsOpen(!isOpen)}>
-                    {isOpen ? <X size={24} color="#f8fafc" /> : <Menu size={24} color="#f8fafc" />}
+                {/* Hamburger */}
+                <button
+                    className="hamburger"
+                    onClick={toggleMenu}
+                    aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+                >
+                    {menuOpen ? <X size={26} /> : <Menu size={26} />}
                 </button>
             </div>
 
-            {/* Mobile Menu */}
-            {isOpen && (
-                <div className="mobile-menu glass-panel">
-                    {navLinks.map((link) => (
-                        <Link
-                            key={link.name}
-                            to={link.path}
-                            className="mobile-nav-link"
-                            onClick={() => setIsOpen(false)}
-                        >
-                            {link.name}
+            {/* Mobile overlay */}
+            {menuOpen && (
+                <div className="mobile-overlay">
+                    <nav className="mobile-nav">
+                        {navLinks.map(link => (
+                            <Link
+                                key={link.name}
+                                to={link.path}
+                                className="mobile-nav-link"
+                                onClick={closeMenu}
+                            >
+                                {link.name}
+                            </Link>
+                        ))}
+                        <Link to="/contact" className="btn-primary mobile-contact-btn" onClick={closeMenu}>
+                            Contact
                         </Link>
-                    ))}
-                    <Link to="/contact" className="btn-primary mobile-btn" onClick={() => setIsOpen(false)}>Contact</Link>
+                    </nav>
                 </div>
             )}
-        </nav>
+        </header>
     );
 }

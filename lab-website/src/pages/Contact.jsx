@@ -1,5 +1,6 @@
 import React from 'react';
 import { MapPin, Mail, Phone, ExternalLink } from 'lucide-react';
+import './Contact.css';
 
 export default function Contact() {
   return (
@@ -7,7 +8,7 @@ export default function Contact() {
       <div className="container">
         <h1 className="section-title">Contact Us</h1>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '48px', alignItems: 'start' }}>
+        <div className="contact-grid">
 
           <div className="glass-panel" style={{ padding: '40px' }}>
             <h3 style={{ fontSize: '1.5rem', marginBottom: '32px', color: 'var(--text-primary)' }}>Get in Touch</h3>
@@ -50,7 +51,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="glass-panel" style={{ height: '100%', minHeight: '400px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
+          <div className="glass-panel map-container">
             {/* Embed Google Map placeholder */}
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.609403816694!2d77.19043991508215!3d28.54480038245233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1df6b841e05b%3A0x67eeaa45a8df24b1!2sIIT%20Delhi!5e0!3m2!1sen!2sin!4v1690000000000!5m2!1sen!2sin"
