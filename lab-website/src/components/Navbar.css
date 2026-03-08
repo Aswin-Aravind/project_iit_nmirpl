@@ -158,5 +158,36 @@
 
     .mobile-menu {
         display: flex;
+        background: #0b1120;
+        /* Completely solid dark color, no transparency to prevent bleed */
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        z-index: 1050;
+    }
+
+    .logo-container {
+        position: absolute;
+        left: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 50px;
+    }
+
+    .navbar-logo {
+        height: 100%;
+        /* Scale logo precisely to the 50px absolute container */
+        max-width: 60vw;
+        /* Prevent transparent png padding from overflowing the screen */
+        object-fit: contain;
+        object-position: left center;
+    }
+
+    .navbar {
+        padding: 0 16px;
+        background: rgba(15, 23, 42, 0.95) !important;
+        /* Make mobile top navbar much more opaque */
+    }
+
+    .navbar.nav-scrolled {
+        padding: 12px 16px;
     }
 }

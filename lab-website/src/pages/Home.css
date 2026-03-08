@@ -165,7 +165,12 @@
 
 @media (max-width: 768px) {
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+
+    .hero-tagline {
+        font-size: 1.05rem;
     }
 
     .highlights-grid {
@@ -181,5 +186,11 @@
 
     .hero-actions {
         flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-actions a {
+        width: 100%;
+        text-align: center;
     }
 }
