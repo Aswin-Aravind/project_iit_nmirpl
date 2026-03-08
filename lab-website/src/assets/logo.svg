@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 120" width="100%" height="100%">
+  <defs>
+    <!-- Red Glow Filter for the Laser -->
+    <filter id="laser-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComponentTransfer in="blur" result="glow">
+        <feFuncR type="linear" slope="3" />
+        <feFuncG type="linear" slope="0" />
+        <feFuncB type="linear" slope="0" />
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Laser Beam Line -->
+  <line x1="5" y1="52" x2="190" y2="52" stroke="#ff3300" stroke-width="1.5" opacity="0.8"/>
+
+  <!-- "NMIRPL" Main Text -->
+  <text x="15" y="66" font-family="'Outfit', 'Inter', sans-serif" font-size="46" font-weight="200" fill="#f8fafc" letter-spacing="14">
+    NMIRPL
+  </text>
+  
+  <!-- Laser Beam Line Continuation -->
+  <line x1="205" y1="52" x2="390" y2="52" stroke="#ff3300" stroke-width="1.5" opacity="0.8"/>
+
+  <!-- Laser Dot at the end -->
+  <circle cx="390" cy="52" r="3.5" fill="#ffffff" filter="url(#laser-glow)"/>
+  <circle cx="390" cy="52" r="1.5" fill="#ffffff"/>
+
+  <!-- Laser Starburst -->
+  <path d="M 390 44 L 390 60 M 382 52 L 398 52" stroke="#ff3300" stroke-width="1.5" opacity="0.9"/>
+  
+  <!-- Small Letters (Subtitle) - Now perfectly scalable vector text! -->
+  <text x="15" y="94" font-family="'Inter', sans-serif" font-size="10.5" font-weight="500" fill="#cbd5e1" letter-spacing="3.5">
+    NEAR &amp; MID-INFRARED PHOTONICS LABORATORY
+  </text>
+</svg>

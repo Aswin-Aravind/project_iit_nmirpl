@@ -1,0 +1,72 @@
+.laser-title-container {
+    display: inline;
+    position: relative;
+    line-height: inherit;
+    white-space: normal;
+}
+
+.laser-char {
+    display: inline;
+    white-space: pre;
+    transition: color 0.3s ease;
+    z-index: 5;
+    position: relative;
+}
+
+.laser-char.hidden {
+    opacity: 0;
+}
+
+.laser-char.visible {
+    opacity: 1;
+}
+
+/* ── WRITING & HOLDING PHASES: Letters stay RED through completion ── */
+.phase-writing .laser-char.visible,
+.phase-holding .laser-char.visible {
+    color: #ff3300;
+    text-shadow: 0 0 8px rgba(255, 50, 0, 0.6);
+}
+
+/* ── FADING PHASE: Everything fades out together ── */
+.phase-fading {
+    animation: laserGlobalFade 0.8s ease-in forwards;
+}
+
+@keyframes laserGlobalFade {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+/* ── THE PIN-POINT LASER DOT ── */
+.laser-dot {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: #ffffff;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 20;
+    box-shadow:
+        0 0 2px 1px #ffffff,
+        0 0 6px 2px #ff0000,
+        0 0 14px 4px rgba(255, 0, 0, 0.8),
+        0 0 28px 6px rgba(255, 0, 0, 0.3);
+    animation: laserDotPulse 0.06s infinite alternate;
+}
+
+@keyframes laserDotPulse {
+    from {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    to {
+        transform: translate(-50%, -50%) scale(1.6);
+    }
+}

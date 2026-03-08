@@ -1,0 +1,21 @@
+.btn-filter {
+    background: transparent;
+    color: var(--text-secondary);
+    border: 1px solid var(--glass-border);
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.btn-filter:hover {
+    background: var(--glass-bg);
+    color: var(--text-primary);
+}
+
+.btn-filter.active {
+    background: var(--accent-gradient);
+    color: #fff;
+    border-color: transparent;
+}
