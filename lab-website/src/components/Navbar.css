@@ -16,8 +16,8 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 32px;
-    height: 68px;
-    background: rgba(10, 16, 35, 0.85);
+    height: 90px;
+    background: rgba(25, 40, 80, 0.92);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -32,10 +32,12 @@
 }
 
 .header-logo {
-    height: 54px;
+    height: 80px;
     width: auto;
     object-fit: contain;
     display: block;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
 }
 
 /* ======================================================
@@ -100,11 +102,11 @@
 .mobile-overlay {
     /* Stack directly on top of the page */
     position: fixed;
-    top: 68px;
+    top: 90px;
     /* Just below the header bar */
     left: 0;
     width: 100%;
-    height: calc(100vh - 68px);
+    height: calc(100vh - 90px);
     background: #0a1023;
     /* Solid dark no transparency */
     z-index: 999;
@@ -174,9 +176,10 @@
 
     .header-bar {
         padding: 0 20px;
+        height: 74px;
     }
 
     .header-logo {
-        height: 44px;
+        height: 60px;
     }
 }
