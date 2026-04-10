@@ -118,7 +118,7 @@ export default function PI() {
             </div>
 
             <h3 style={{ marginBottom: '20px', fontSize: '1.4rem' }}>Detailed Profile</h3>
-            <div className="pi-accordion-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+            <div className="pi-accordion-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '24px' }}>
               {sections.map(section => {
                 const Icon = section.icon;
                 return (
@@ -168,14 +168,14 @@ export default function PI() {
         }}>
           <div style={{
             background: '#ffffff', border: '1px solid rgba(0,0,0,0.1)',
-            borderRadius: '24px', padding: '40px', maxWidth: '600px', width: '100%',
+            borderRadius: '24px', padding: isDesktop ? '40px' : '24px', maxWidth: '600px', width: '100%',
             maxHeight: '90vh', overflowY: 'auto',
             boxShadow: '0 24px 48px rgba(0,0,0,0.4)', position: 'relative',
             animation: 'slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards'
           }}>
             <button 
               onClick={closeModal}
-              style={{ position: 'absolute', top: '24px', right: '24px', background: '#f1f5f9', border: 'none', borderRadius: '50%', padding: '8px', cursor: 'pointer', transition: 'background 0.2s' }}
+              style={{ position: 'absolute', top: '16px', right: '16px', background: '#f1f5f9', border: 'none', borderRadius: '50%', padding: '8px', cursor: 'pointer', transition: 'background 0.2s', zIndex: 10 }}
               onMouseEnter={(e) => e.currentTarget.style.background = '#e2e8f0'}
               onMouseLeave={(e) => e.currentTarget.style.background = '#f1f5f9'}
             >
@@ -188,11 +188,11 @@ export default function PI() {
               const ModalIcon = sec.icon;
               return (
                 <div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '32px' }}>
-                     <div style={{ padding: '14px', background: 'rgba(239, 68, 68, 0.1)', borderRadius: '14px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '32px', paddingRight: '40px' }}>
+                     <div style={{ padding: '14px', background: 'rgba(239, 68, 68, 0.1)', borderRadius: '14px', flexShrink: 0 }}>
                         <ModalIcon size={36} color="#dc2626" />
                      </div>
-                     <h2 style={{ margin: 0, fontSize: '1.8rem', color: '#0f172a' }}>{sec.title}</h2>
+                     <h2 style={{ margin: 0, fontSize: isDesktop ? '1.8rem' : '1.5rem', color: '#0f172a', wordBreak: 'break-word' }}>{sec.title}</h2>
                   </div>
                   {sec.content}
                 </div>

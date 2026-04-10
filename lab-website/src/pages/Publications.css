@@ -19,3 +19,21 @@
     color: #fff;
     border-color: transparent;
 }
+
+@media (max-width: 768px) {
+    .pub-card-list {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 12px;
+        padding: 16px !important;
+    }
+    
+    .pub-card-list > div:last-child {
+        text-align: left !important;
+        width: 100% !important;
+    }
+
+    .pub-card {
+        padding: 16px !important;
+    }
+}

@@ -60,4 +60,7 @@
     .research-grid {
         grid-template-columns: 1fr;
     }
+    .research-card {
+        padding: 24px;
+    }
 }

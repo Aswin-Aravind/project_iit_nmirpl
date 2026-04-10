@@ -12,6 +12,7 @@
     width: auto;
     height: 70vh;
     max-width: 90vw;
+    object-fit: contain;
     opacity: 0.12;
     animation: rotateLogo 80s linear infinite;
     z-index: 0;

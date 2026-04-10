@@ -11,7 +11,7 @@ export default function Join() {
           We are always looking for motivated and passionate researchers to join our team at IIT Delhi.
         </p>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '32px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))', gap: '32px' }}>
 
           <div className="glass-panel" style={{ padding: '32px' }}>
             <h3 style={{ fontSize: '1.5rem', color: 'var(--accent-primary)', marginBottom: '16px' }}>PhD Openings</h3>

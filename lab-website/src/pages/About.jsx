@@ -46,7 +46,7 @@ export default function About() {
                         The group led by Prof. Gayathri Bharathan focuses on the design and development of near- and mid-infrared fiber lasers, fiber amplifiers, and fiberized integrated components. The research emphasizes advancing high-power, wavelength-flexible fiber laser systems and addressing current limitations in mid-IR fiber laser development by creating mid-IR compatible integrated components such as waveguides, couplers, and WDMs, enabling fully fiberized laser cavities. The group also aims to develop novel broadband supercontinuum sources in the molecular fingerprint region (2-12 µm) using near- and mid-IR ultrafast fiber lasers, with applications in spectroscopy, sensing, and environmental and health monitoring.
                     </p>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '32px' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '32px' }}>
                         <div style={{ background: 'rgba(37, 99, 235, 0.05)', padding: '24px', borderRadius: '16px', border: '1px solid rgba(37, 99, 235, 0.1)' }}>
                             <h3 style={{ color: 'var(--accent-primary)', marginBottom: '16px', fontSize: '1.3rem' }}>Current Research Topics</h3>
                             <p style={{ color: 'var(--text-secondary)', lineHeight: '1.7' }}>
@@ -66,7 +66,7 @@ export default function About() {
                 {/* Team Section */}
                 <h2 style={{ fontSize: '2.4rem', fontWeight: 700, marginBottom: '40px', color: 'var(--text-primary)', textAlign: 'center' }}>The Team</h2>
                 
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '32px', marginBottom: '80px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))', gap: '32px', marginBottom: '80px' }}>
                     {teamMembers.map((member, idx) => (
                         <div key={idx} className="glass-panel" style={{ padding: '24px', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', transition: 'transform 0.3s ease', height: '100%' }}>
                             <div style={{ width: '180px', height: '180px', borderRadius: '50%', overflow: 'hidden', marginBottom: '20px', border: '4px solid #fff', boxShadow: '0 8px 24px rgba(0,0,0,0.1)' }}>
@@ -75,9 +75,37 @@ export default function About() {
                             <h3 style={{ fontSize: '1.3rem', marginBottom: '8px', color: '#0f172a', minHeight: '3rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{member.name}</h3>
                             <p style={{ color: 'var(--accent-primary)', fontWeight: 500, marginBottom: '24px', minHeight: '2.5rem' }}>{member.title}</p>
                             
-                            <a href={`https://mail.google.com/mail/?view=cm&to=${encodeURIComponent(member.email)}`} target="_blank" rel="noreferrer" style={{ marginTop: 'auto', display: 'inline-flex', alignItems: 'center', gap: '8px', fontSize: '0.9rem', color: 'var(--text-secondary)', textDecoration: 'none', background: 'var(--bg-secondary)', padding: '10px 20px', borderRadius: '24px', transition: 'all 0.2s', fontWeight: 500, border: '1px solid rgba(0,0,0,0.05)' }} onMouseEnter={(e) => { e.currentTarget.style.background = '#e2e8f0'; e.currentTarget.style.color = 'var(--accent-hover)'; }} onMouseLeave={(e) => { e.currentTarget.style.background = 'var(--bg-secondary)'; e.currentTarget.style.color = 'var(--text-secondary)'; }}>
-                                <Mail size={16} /> Contact
-                            </a>
+                            {(() => {
+                                const isPI = member.title === "Principal Investigator";
+                                const defaultBg = isPI ? '#033500' : 'var(--bg-secondary)';
+                                const defaultColor = isPI ? '#ffffff' : 'var(--text-secondary)';
+                                const hoverBg = isPI ? '#022400' : '#e2e8f0';
+                                const hoverColor = isPI ? '#ffffff' : 'var(--accent-hover)';
+
+                                return (
+                                    <a 
+                                        href={`https://mail.google.com/mail/?view=cm&to=${encodeURIComponent(member.email)}`} 
+                                        target="_blank" 
+                                        rel="noreferrer" 
+                                        style={{ 
+                                            marginTop: 'auto', display: 'inline-flex', alignItems: 'center', gap: '8px', 
+                                            fontSize: '0.9rem', color: defaultColor, textDecoration: 'none', 
+                                            background: defaultBg, padding: '10px 20px', borderRadius: '24px', 
+                                            transition: 'all 0.2s', fontWeight: 500, border: isPI ? 'none' : '1px solid rgba(0,0,0,0.05)' 
+                                        }} 
+                                        onMouseEnter={(e) => { 
+                                            e.currentTarget.style.background = hoverBg; 
+                                            e.currentTarget.style.color = hoverColor; 
+                                        }} 
+                                        onMouseLeave={(e) => { 
+                                            e.currentTarget.style.background = defaultBg; 
+                                            e.currentTarget.style.color = defaultColor; 
+                                        }}
+                                    >
+                                        <Mail size={16} /> Contact
+                                    </a>
+                                );
+                            })()}
                         </div>
                     ))}
                 </div>

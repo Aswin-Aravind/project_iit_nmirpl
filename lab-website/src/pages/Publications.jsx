@@ -84,7 +84,8 @@ export default function Publications() {
                <button 
                 key={f} 
                 onClick={() => setFilter(f)} 
-                style={{ padding: '10px 24px', borderRadius: '30px', border: 'none', cursor: 'pointer', background: filter === f ? 'var(--accent-primary)' : 'transparent', color: filter === f ? '#fff' : 'var(--text-secondary)', fontWeight: 600, transition: 'all 0.2s' }}
+                className="pub-filter-btn"
+                style={{ padding: '8px 16px', borderRadius: '30px', border: 'none', cursor: 'pointer', background: filter === f ? 'var(--accent-primary)' : 'transparent', color: filter === f ? '#fff' : 'var(--text-secondary)', fontWeight: 600, transition: 'all 0.2s' }}
               >
                 {f}
                </button>
@@ -110,7 +111,7 @@ export default function Publications() {
                 <div style={{ padding: '12px', background: 'rgba(37, 99, 235, 0.1)', borderRadius: '12px' }}><BookOpen size={24} style={{ color: 'var(--accent-primary)' }} /></div>
                 <h2 style={{ fontSize: '1.8rem', color: '#0f172a' }}>Journals</h2>
               </div>
-              <div style={viewMode === 'grid' ? { display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '24px' } : { display: 'flex', flexDirection: 'column' }}>
+              <div style={viewMode === 'grid' ? { display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 320px), 1fr))', gap: '24px' } : { display: 'flex', flexDirection: 'column' }}>
                 {journals.map((pub, idx) => renderCard(pub, idx))}
               </div>
             </div>
@@ -122,7 +123,7 @@ export default function Publications() {
                 <div style={{ padding: '12px', background: 'rgba(37, 99, 235, 0.1)', borderRadius: '12px' }}><FileText size={24} style={{ color: 'var(--accent-primary)' }} /></div>
                 <h2 style={{ fontSize: '1.8rem', color: '#0f172a' }}>Conferences</h2>
               </div>
-              <div style={viewMode === 'grid' ? { display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '24px' } : { display: 'flex', flexDirection: 'column' }}>
+              <div style={viewMode === 'grid' ? { display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 320px), 1fr))', gap: '24px' } : { display: 'flex', flexDirection: 'column' }}>
                 {conferences.map((pub, idx) => renderCard(pub, idx))}
               </div>
             </div>
@@ -134,7 +135,7 @@ export default function Publications() {
                 <div style={{ padding: '12px', background: 'rgba(37, 99, 235, 0.1)', borderRadius: '12px' }}><Bookmark size={24} style={{ color: 'var(--accent-primary)' }} /></div>
                 <h2 style={{ fontSize: '1.8rem', color: '#0f172a' }}>Other (Book Chapters)</h2>
               </div>
-              <div style={viewMode === 'grid' ? { display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '24px' } : { display: 'flex', flexDirection: 'column' }}>
+              <div style={viewMode === 'grid' ? { display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 320px), 1fr))', gap: '24px' } : { display: 'flex', flexDirection: 'column' }}>
                 {others.map((pub, idx) => renderCard(pub, idx))}
               </div>
             </div>

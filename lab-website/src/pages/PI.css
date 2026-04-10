@@ -104,6 +104,10 @@
 }
 
 @media (max-width: 768px) {
+    .pi-container {
+        padding: 20px;
+    }
+
     .pi-header {
         flex-direction: column;
         text-align: center;
