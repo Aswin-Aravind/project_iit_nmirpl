@@ -1,11 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { projects } from '../data/projects';
-import { Activity } from 'lucide-react';
+import { Activity, X } from 'lucide-react';
 
 export default function Grants() {
   return (
     <div className="section animate-fade-in" style={{ paddingTop: '120px' }}>
       <div className="container">
+        <Link to="/research" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '40px', height: '40px', background: 'rgba(239, 68, 68, 0.1)', color: '#ef4444', borderRadius: '50%', textDecoration: 'none', marginBottom: '24px', transition: 'background 0.2s' }}>
+          <X size={24} />
+        </Link>
         <h1 className="section-title">Projects & Grants</h1>
         <p className="lead-text" style={{ marginBottom: '40px' }}>
           Our research is generously supported by national and international funding agencies.

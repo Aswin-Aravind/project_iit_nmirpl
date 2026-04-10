@@ -1,59 +1,91 @@
 import React from 'react';
-import { Target, Lightbulb, Shield, Activity } from 'lucide-react';
+import Carousel from '../components/Carousel';
+import { Mail } from 'lucide-react';
 import './About.css';
 
+import gaayuPic from '../assets/Gaayu_Pic.jpg';
+import archanaPic from '../assets/Archana.jpg';
+import bhanuPic from '../assets/Bhanu IMG.jpeg';
+import anjaliPic from '../assets/Anjali.jpg';
+
 export default function About() {
-    const applications = [
-        { title: "Medical Lasers", icon: <Activity size={32} /> },
-        { title: "Environmental Sensing", icon: <Target size={32} /> },
-        { title: "Defense & Security", icon: <Shield size={32} /> },
-        { title: "Fiber Amplifiers", icon: <Lightbulb size={32} /> }
+    const teamMembers = [
+        {
+            name: "Prof. Gayathri Bharathan",
+            title: "Principal Investigator",
+            email: "gbharathan@iitd.ac.in",
+            img: gaayuPic
+        },
+        {
+            name: "Dr. Archana T C",
+            title: "Principal Project Scientist",
+            email: "ird601528@iitd.ac.in",
+            img: archanaPic
+        },
+        {
+            name: "Mr. Bhanu Yadav",
+            title: "PhD Scholar",
+            email: "opz248271@opc.iitd.ac.in",
+            img: bhanuPic
+        },
+        {
+            name: "Ms. Anjali Nehra",
+            title: "PhD Scholar",
+            email: "anjalinehra1999@gmail.com",
+            img: anjaliPic
+        }
     ];
 
     return (
-        <div className="section animate-fade-in" style={{ paddingTop: '120px' }}>
+        <div className="section animate-fade-in" style={{ paddingTop: '160px' }}>
             <div className="container">
-                <h1 className="section-title">About the Lab</h1>
+                <h1 className="section-title" style={{ marginBottom: '40px' }}>About the Lab</h1>
 
-                <div className="about-grid">
-                    <div className="about-content glass-panel">
-                        <h2>Vision & Mission</h2>
-                        <p className="lead-text">
-                            The Near and Mid-IR Photonics Laboratory (NMIRPL) at IIT Delhi focuses on pioneering research in fiber lasers and photonic devices.
-                        </p>
-                        <p>
-                            Our mission is to bridge the gap between fundamental optical physics and real-world technological applications. By developing advanced mid-infrared components, we aim to deliver next-generation solutions for medical diagnostics, environmental monitoring, and national security.
-                        </p>
+                <div className="glass-panel" style={{ padding: '40px', marginBottom: '60px' }}>
+                    <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: 'var(--text-secondary)', marginBottom: '32px' }}>
+                        The group led by Prof. Gayathri Bharathan focuses on the design and development of near- and mid-infrared fiber lasers, fiber amplifiers, and fiberized integrated components. The research emphasizes advancing high-power, wavelength-flexible fiber laser systems and addressing current limitations in mid-IR fiber laser development by creating mid-IR compatible integrated components such as waveguides, couplers, and WDMs, enabling fully fiberized laser cavities. The group also aims to develop novel broadband supercontinuum sources in the molecular fingerprint region (2-12 µm) using near- and mid-IR ultrafast fiber lasers, with applications in spectroscopy, sensing, and environmental and health monitoring.
+                    </p>
 
-                        <h2 className="mt-8">Why Near- and Mid-IR?</h2>
-                        <p>
-                            The mid-infrared spectral range (2-5 µm) contains the fundamental absorption bands of numerous important molecules. By designing precise, high-power fiber lasers that operate in these specific wavelengths, we unlock entirely new paradigms in spectroscopy, non-invasive surgery, and long-range remote sensing.
-                        </p>
-                    </div>
-
-                    <div className="about-sidebar">
-                        <h3 className="sidebar-title">Key Applications</h3>
-                        <div className="applications-grid">
-                            {applications.map((app, index) => (
-                                <div key={index} className="app-card glass-panel">
-                                    <div className="app-icon">{app.icon}</div>
-                                    <h4>{app.title}</h4>
-                                </div>
-                            ))}
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '32px' }}>
+                        <div style={{ background: 'rgba(37, 99, 235, 0.05)', padding: '24px', borderRadius: '16px', border: '1px solid rgba(37, 99, 235, 0.1)' }}>
+                            <h3 style={{ color: 'var(--accent-primary)', marginBottom: '16px', fontSize: '1.3rem' }}>Current Research Topics</h3>
+                            <p style={{ color: 'var(--text-secondary)', lineHeight: '1.7' }}>
+                                Design and fabrication of fiberized integrated components for all-fiber laser cavities. Development of all-fiber CW and pulsed laser sources in the near and mid-IR wavelengths.
+                            </p>
                         </div>
-
-                        <div className="glass-panel stats-panel mt-4">
-                            <div className="stat">
-                                <h3>15+</h3>
-                                <p>Publications</p>
-                            </div>
-                            <div className="stat">
-                                <h3>5</h3>
-                                <p>Major Projects</p>
-                            </div>
+                        <div style={{ background: 'rgba(37, 99, 235, 0.05)', padding: '24px', borderRadius: '16px', border: '1px solid rgba(37, 99, 235, 0.1)' }}>
+                            <h3 style={{ color: 'var(--accent-primary)', marginBottom: '16px', fontSize: '1.3rem' }}>Ongoing Work</h3>
+                            <ul style={{ color: 'var(--text-secondary)', lineHeight: '1.7', paddingLeft: '20px', listStyleType: 'disc' }}>
+                                <li style={{ marginBottom: '12px' }}>Working on a DRDO funded project, aiming to develop source of 2 and 4 µm wavelength for counter-measure purposes.</li>
+                                <li>Working on demonstrating and implementing a saturable absorber based on multimodal interference compatible for 2 µm wavelength mode locking.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
+
+                {/* Team Section */}
+                <h2 style={{ fontSize: '2.4rem', fontWeight: 700, marginBottom: '40px', color: 'var(--text-primary)', textAlign: 'center' }}>The Team</h2>
+                
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '32px', marginBottom: '80px' }}>
+                    {teamMembers.map((member, idx) => (
+                        <div key={idx} className="glass-panel" style={{ padding: '24px', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', transition: 'transform 0.3s ease', height: '100%' }}>
+                            <div style={{ width: '180px', height: '180px', borderRadius: '50%', overflow: 'hidden', marginBottom: '20px', border: '4px solid #fff', boxShadow: '0 8px 24px rgba(0,0,0,0.1)' }}>
+                                <img src={member.img} alt={member.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            </div>
+                            <h3 style={{ fontSize: '1.3rem', marginBottom: '8px', color: '#0f172a', minHeight: '3rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{member.name}</h3>
+                            <p style={{ color: 'var(--accent-primary)', fontWeight: 500, marginBottom: '24px', minHeight: '2.5rem' }}>{member.title}</p>
+                            
+                            <a href={`https://mail.google.com/mail/?view=cm&to=${encodeURIComponent(member.email)}`} target="_blank" rel="noreferrer" style={{ marginTop: 'auto', display: 'inline-flex', alignItems: 'center', gap: '8px', fontSize: '0.9rem', color: 'var(--text-secondary)', textDecoration: 'none', background: 'var(--bg-secondary)', padding: '10px 20px', borderRadius: '24px', transition: 'all 0.2s', fontWeight: 500, border: '1px solid rgba(0,0,0,0.05)' }} onMouseEnter={(e) => { e.currentTarget.style.background = '#e2e8f0'; e.currentTarget.style.color = 'var(--accent-hover)'; }} onMouseLeave={(e) => { e.currentTarget.style.background = 'var(--bg-secondary)'; e.currentTarget.style.color = 'var(--text-secondary)'; }}>
+                                <Mail size={16} /> Contact
+                            </a>
+                        </div>
+                    ))}
+                </div>
+
+                {/* Carousel */}
+                <h2 style={{ fontSize: '2.2rem', fontWeight: 700, marginBottom: '24px', color: 'var(--text-primary)', textAlign: 'center' }}>Lab Gallery</h2>
+                <Carousel />
+
             </div>
         </div>
     );

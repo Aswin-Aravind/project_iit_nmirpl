@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import logoImg from '../assets/logo.png';
@@ -16,13 +16,25 @@ const navLinks = [
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
     const location = useLocation();
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 50) setScrolled(true);
+            else setScrolled(false);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     const closeMenu = () => setMenuOpen(false);
     const toggleMenu = () => setMenuOpen(prev => !prev);
 
+    const isHidden = scrolled && location.pathname !== '/';
+
     return (
-        <header className="site-header">
+        <header className={`site-header ${isHidden ? 'hidden-nav' : ''}`}>
             {/* Top bar */}
             <div className="header-bar">
                 <Link to="/" className="header-logo-link" onClick={closeMenu}>

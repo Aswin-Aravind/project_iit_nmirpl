@@ -1,5 +1,5 @@
 .footer {
-    background-color: var(--bg-secondary);
+    background-color: transparent;
     border-top: 1px solid var(--glass-border);
     padding-bottom: 40px;
 }

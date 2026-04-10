@@ -45,7 +45,7 @@ export default function Contact() {
             </div>
 
             <div style={{ marginTop: '40px' }}>
-              <a href="https://physics.iitd.ac.in/" target="_blank" rel="noopener noreferrer" className="btn-secondary" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+              <a href="https://physics.iitd.ac.in/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#22c55e', color: '#fff', padding: '12px 24px', borderRadius: '24px', textDecoration: 'none', fontWeight: 600, boxShadow: '0 8px 16px rgba(34, 197, 94, 0.3)', transition: 'transform 0.2s' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
                 Physics Department IITD <ExternalLink size={16} />
               </a>
             </div>

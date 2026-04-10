@@ -1,7 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import CosmosCanvas from './components/CosmosCanvas';
+import PremiumWhiteCanvas from './components/PremiumWhiteCanvas';
+import ScrollToTop from './components/ScrollToTop';
+import FixedHomeButton from './components/FixedHomeButton';
 
 import Home from './pages/Home';
 import About from './pages/About';
@@ -19,8 +21,10 @@ import Teaching from './pages/Teaching';
 function App() {
     return (
         <Router>
+            <ScrollToTop />
             <div className="app">
-                <CosmosCanvas />
+                <PremiumWhiteCanvas />
+                <div className="app-global-bg"></div>
                 <Navbar />
                 <div className="content">
                     <Routes>
@@ -39,6 +43,7 @@ function App() {
                     </Routes>
                 </div>
                 <Footer />
+                <FixedHomeButton />
             </div>
         </Router>
     );
