@@ -72,7 +72,7 @@ export default function About() {
                             <div style={{ width: '180px', height: '180px', borderRadius: '50%', overflow: 'hidden', marginBottom: '20px', border: '4px solid #fff', boxShadow: '0 8px 24px rgba(0,0,0,0.1)' }}>
                                 <img src={member.img} alt={member.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                             </div>
-                            <h3 style={{ fontSize: '1.3rem', marginBottom: '8px', color: '#0f172a', minHeight: '3rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{member.name}</h3>
+                            <h3 style={{ fontSize: '1.15rem', marginBottom: '8px', color: '#0f172a', minHeight: '3rem', display: 'flex', alignItems: 'center', justifyContent: 'center', whiteSpace: 'nowrap' }}>{member.name}</h3>
                             <p style={{ color: 'var(--accent-primary)', fontWeight: 500, marginBottom: '24px', minHeight: '2.5rem' }}>{member.title}</p>
                             
                             {(() => {
