@@ -19,22 +19,23 @@ export default function Join() {
               We have fully-funded PhD positions available for candidates with a strong background in Physics, Photonics, or Electrical Engineering. Candidates must clear the IIT Delhi PhD selection process.
             </p>
             <ul style={{ color: 'var(--text-secondary)', marginBottom: '24px', marginLeft: '20px', listStyleType: 'disc' }}>
-              <li>Mid-IR Fiber Laser Development</li>
-              <li>Optical Gas Sensors</li>
+              <li>Fiber Laser Development</li>
+              <li>Optical sensors</li>
+              <li>Optical integrated components</li>
             </ul>
           </div>
 
           <div className="glass-panel" style={{ padding: '32px' }}>
             <h3 style={{ fontSize: '1.5rem', color: 'var(--accent-primary)', marginBottom: '16px' }}>Postdoc Opportunities</h3>
             <p style={{ color: 'var(--text-secondary)', marginBottom: '24px', lineHeight: '1.6' }}>
-              Positions are open for National Postdoctoral Fellows (NPDF) and institute postdocs. Prior experience in experimental optics, fiber splicing, or laser physics is highly desirable.
+              Positions are open for National Postdoctoral Fellows (NPDF) and institute postdocs. Prior experience in experimental optics, fiber optics, or laser physics is highly desirable.
             </p>
           </div>
 
           <div className="glass-panel" style={{ padding: '32px' }}>
             <h3 style={{ fontSize: '1.5rem', color: 'var(--accent-primary)', marginBottom: '16px' }}>Internships</h3>
             <p style={{ color: 'var(--text-secondary)', marginBottom: '24px', lineHeight: '1.6' }}>
-              Short-term (3-6 months) internships are available for highly motivated undergraduate and master's students. Limited funding is available depending on the project.
+              Short-term (2-6 months) internships are available for highly motivated undergraduate and master's students. Limited funding is available depending on the project.
             </p>
           </div>
 

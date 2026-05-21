@@ -17,9 +17,9 @@ export default function Footer() {
                     <div className="footer-col">
                         <h4 className="footer-subtitle">Contact</h4>
                         <ul className="footer-links">
-                            <li><MapPin size={18} /> IIT Delhi, Hauz Khas, New Delhi</li>
-                            <li><Mail size={18} /> gbharathan@iitd.ac.in</li>
-                            <li><Phone size={18} /> +91-11-2659-XXXX</li>
+                            <li><MapPin size={18} /> NMIRPL, Optics & Photonics Centre, IIT Delhi, Hauz Khas, New Delhi - 110016, India</li>
+                            <li><Mail size={18} /> gayathrib@iitd.ac.in</li>
+                            <li><Phone size={18} /> 011-265913583</li>
                         </ul>
                     </div>
 

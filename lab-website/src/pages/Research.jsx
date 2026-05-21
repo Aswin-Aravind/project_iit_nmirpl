@@ -6,12 +6,12 @@ import './Research.css';
 export default function Research() {
   const areas = [
     {
-      title: "Mid-Infrared Fiber Lasers",
-      desc: "Developing high-power fiber laser sources operating in the 2-5 µm spectral region for defense and medical applications.",
+      title: "Near & Mid-Infrared Fiber Lasers",
+      desc: "Developing high-power fiber laser sources operating in the 1-5 µm spectral region for defence, spectroscopy and medical applications.",
       icon: <Zap size={32} />
     },
     {
-      title: "Mid-IR Photonic Sensors",
+      title: "Photonic Sensors",
       desc: "Creating highly sensitive, fiber-based compact sensors for environmental monitoring and trace gas detection.",
       icon: <Target size={32} />
     },
@@ -27,7 +27,7 @@ export default function Research() {
     },
     {
       title: "Advanced Photonic Devices",
-      desc: "Fabrication of novel fiber components, gratings, and couplers for next-generation optical networks.",
+      desc: "Fabrication of novel fiber components, gratings, and couplers for next-generation optical systems.",
       icon: <Microscope size={32} />
     }
   ];

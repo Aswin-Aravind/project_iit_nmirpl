@@ -5,13 +5,13 @@ export const members = {
         name: "Prof. Gayathri Bharathan",
         role: "Principal Investigator",
         title: "Assistant Professor",
-        bio: "Gayathri Bharathan received her Ph.D in Photonics from Macquarie University, Australia, and subsequently carried out postdoctoral research at EPFL, Switzerland. Since 2023, she has been a faculty member at the Optics and Photonics Centre, IIT Delhi.\n\nHer research interests include fiber lasers, nonlinear optics, and mid-infrared photonics, with a focus on fiber-based devices such as fiber Bragg gratings and multimode interference structures. Her work is centered on developing innovative and practical photonic solutions for applications in sensing, healthcare, and environmental monitoring. She has contributed to several high-impact publications and is actively engaged in advancing research and mentoring students in photonics.\n\nDynamic academic leader with more than seven years of experience in premier institutions, including as Assistant Professor at IIT Delhi. Proven track record in driving institutional strategy, research development, academic quality enhancement, and student engagement. With proven experience in establishing and managing advanced research facilities, securing funding, and building global academic partnerships, she aims to bring innovation, quality education, and impactful scholarship to support the educational institute's vision and growth.",
+        bio: "Gayathri Bharathan received her Ph.D in Photonics from Macquarie University, Australia, and subsequently carried out postdoctoral research at EPFL, Switzerland. Since 2023, she has been a faculty member at the Optics and Photonics Centre, IIT Delhi.\n\nHer research interests include fiber lasers, nonlinear optics, and mid-infrared photonics, with a focus on fiber-based devices such as fiber Bragg gratings and multimode interference structures. Her work is centered on developing innovative and practical photonic solutions for applications in defence, sensing, healthcare, and environmental monitoring. She has contributed to several high-impact publications and is actively engaged in advancing research and mentoring students in photonics.\n\nDynamic academic leader with more than seven years of experience in premier institutions, including as Assistant Professor at IIT Delhi. Proven track record in driving institutional strategy, research development, academic quality enhancement, and student engagement. With proven experience in establishing and managing advanced research facilities, securing funding, and building global academic partnerships, she aims to bring innovation, quality education, and impactful scholarship to support the educational institute's vision and growth.",
         email: "gayathrib@iitd.ac.in",
         image: piImage,
         researchInterests: [
-            "Mid-Infrared Fiber Lasers",
+            "Near & Mid-Infrared Fiber Lasers",
             "Near-IR and 2 µm Fiber Laser Systems",
-            "Mid-IR Photonic Sensors",
+            "Photonic Sensors",
             "Fiber-based Biomedical Lasers",
             "Nonlinear Fiber Optics",
             "Advanced Photonic Devices"

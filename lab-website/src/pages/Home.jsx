@@ -7,7 +7,10 @@ import './Home.css';
 export default function Home() {
     return (
         <div className="home-page animate-fade-in">
-            <img src={iitdLogo} alt="IIT Delhi Background" className="home-bg-logo" />
+            <div className="home-bg-logo-container">
+                <img src={iitdLogo} alt="IIT Delhi Background Outer" className="home-bg-logo-outer" />
+                <img src={iitdLogo} alt="IIT Delhi Background Inner" className="home-bg-logo-inner" />
+            </div>
             {/* Hero Section */}
             <section className="hero">
                 <div className="container hero-content">

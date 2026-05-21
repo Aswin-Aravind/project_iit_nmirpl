@@ -50,21 +50,17 @@
 
 .header-logo {
     position: relative;
-    height: 100px;
+    height: 52px;
     width: auto;
     object-fit: contain;
     display: block;
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
     transform-origin: left center;
-    transform: scale(1.6);
-    margin-left: 20px;
     transition: transform 0.3s ease;
     z-index: 1001;
 }
 
 .header-bar:hover .header-logo {
-    transform: scale(1.65);
+    transform: scale(1.03);
 }
 
 /* ======================================================
@@ -212,8 +208,8 @@
     }
 
     .header-logo {
-        height: 55px;
-        transform: scale(1.2);
-        margin-left: 10px;
+        height: 42px;
+        transform: none;
+        margin-left: 0;
     }
 }

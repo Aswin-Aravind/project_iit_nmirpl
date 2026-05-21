@@ -84,7 +84,16 @@ export default function About() {
 
                                 return (
                                     <a 
-                                        href={`https://mail.google.com/mail/?view=cm&to=${encodeURIComponent(member.email)}`} 
+                                        href={`mailto:${member.email}`}
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                                            if (isMobile) {
+                                                window.location.href = `mailto:${member.email}`;
+                                            } else {
+                                                window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(member.email)}`, '_blank', 'noopener,noreferrer');
+                                            }
+                                        }}
                                         target="_blank" 
                                         rel="noreferrer" 
                                         style={{ 

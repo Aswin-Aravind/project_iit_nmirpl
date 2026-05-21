@@ -101,7 +101,7 @@ export default function PI() {
               <h2>{pi.name}</h2>
               <h3 className="pi-title" style={{ fontSize: '1.2rem', marginBottom: '20px' }}>
                 <a href="https://opc.iitd.ac.in/faculty/prof-gayathri-bharathan" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.2s', borderBottom: '1px solid rgba(0,0,0,0.1)' }} onMouseEnter={(e) => e.target.style.color = 'var(--accent-primary)'} onMouseLeave={(e) => e.target.style.color = 'inherit'}>
-                  {pi.role} — {pi.title} (Optics and Photonics Center, IIT Delhi)
+                  {pi.title} (Optics and Photonics Center, IIT Delhi)
                 </a>
               </h3>
             </div>

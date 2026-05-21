@@ -21,6 +21,10 @@
 }
 
 @media (max-width: 768px) {
+    .view-toggle-container {
+        display: none !important;
+    }
+
     .pub-card-list {
         flex-direction: column !important;
         align-items: flex-start !important;

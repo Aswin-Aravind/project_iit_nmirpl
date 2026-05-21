@@ -1,9 +1,11 @@
+import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import PremiumWhiteCanvas from './components/PremiumWhiteCanvas';
 import ScrollToTop from './components/ScrollToTop';
 import FixedHomeButton from './components/FixedHomeButton';
+import IntroSplash from './components/IntroSplash';
 
 import Home from './pages/Home';
 import About from './pages/About';
@@ -19,10 +21,14 @@ import Research from './pages/Research';
 import Teaching from './pages/Teaching';
 
 function App() {
+    // Show intro on every page load
+    const [showIntro, setShowIntro] = useState(true);
+
     return (
         <Router>
             <ScrollToTop />
             <div className="app">
+                {showIntro && <IntroSplash onComplete={() => setShowIntro(false)} />}
                 <PremiumWhiteCanvas />
                 <div className="app-global-bg"></div>
                 <Navbar />

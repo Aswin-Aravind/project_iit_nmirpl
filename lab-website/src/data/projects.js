@@ -1,18 +1,26 @@
 export const projects = [
     {
         id: 1,
-        title: "Development of High-Power 2 µm Fiber Lasers",
-        agency: "Department of Science and Technology, India",
-        duration: "2023 - 2026",
+        title: "Development of 2 µm and 4 µm Lasers for Countermeasure Applications",
+        agency: "DRDO",
+        duration: "2024 - 2027",
         collaborators: "IIT Delhi, DRDO",
         status: "ongoing"
     },
     {
         id: 2,
-        title: "Mid-IR optical characterization for Biomedical Lasers",
-        agency: "Indian Council of Medical Research",
-        duration: "2022 - 2025",
-        collaborators: "AIIMS New Delhi",
+        title: "2 µm Ultrashort Pulsed Laser Development",
+        agency: "IIT Delhi",
+        duration: "2024 - 2027",
+        collaborators: "IIT Delhi",
+        status: "ongoing"
+    },
+    {
+        id: 3,
+        title: "True All-Fiber Mid-Infrared Supercontinuum Source for Spectroscopy",
+        agency: "ANRF",
+        duration: "TBA",
+        collaborators: "ANRF, IIT Delhi",
         status: "ongoing"
     }
 ];

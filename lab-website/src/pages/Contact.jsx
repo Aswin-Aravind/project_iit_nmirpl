@@ -20,7 +20,7 @@ export default function Contact() {
                   <h4 style={{ color: 'var(--text-primary)', fontSize: '1.1rem', marginBottom: '4px' }}>Address</h4>
                   <p style={{ color: 'var(--text-secondary)', lineHeight: '1.6' }}>
                     Near and Mid-IR Photonics Laboratory (NMIRPL)<br />
-                    Department of Physics<br />
+                    Optics & Photonics Centre<br />
                     Indian Institute of Technology Delhi<br />
                     Hauz Khas, New Delhi - 110016, India
                   </p>
@@ -31,7 +31,22 @@ export default function Contact() {
                 <Mail color="var(--accent-primary)" size={28} style={{ flexShrink: 0 }} />
                 <div>
                   <h4 style={{ color: 'var(--text-primary)', fontSize: '1.1rem', marginBottom: '4px' }}>Email</h4>
-                  <a href="mailto:gbharathan@iitd.ac.in" style={{ color: 'var(--text-secondary)' }}>gbharathan@iitd.ac.in</a>
+                  <a 
+                    href="mailto:gayathrib@iitd.ac.in" 
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const email = "gayathrib@iitd.ac.in";
+                      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                      if (isMobile) {
+                        window.location.href = `mailto:${email}`;
+                      } else {
+                        window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}`, '_blank', 'noopener,noreferrer');
+                      }
+                    }}
+                    style={{ color: 'var(--text-secondary)' }}
+                  >
+                    gayathrib@iitd.ac.in
+                  </a>
                 </div>
               </div>
 
@@ -39,14 +54,14 @@ export default function Contact() {
                 <Phone color="var(--accent-primary)" size={28} style={{ flexShrink: 0 }} />
                 <div>
                   <h4 style={{ color: 'var(--text-primary)', fontSize: '1.1rem', marginBottom: '4px' }}>Phone</h4>
-                  <p style={{ color: 'var(--text-secondary)' }}>+91-11-2659-XXXX</p>
+                  <p style={{ color: 'var(--text-secondary)' }}>011-265913583</p>
                 </div>
               </div>
             </div>
 
             <div style={{ marginTop: '40px' }}>
-              <a href="https://physics.iitd.ac.in/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#22c55e', color: '#fff', padding: '12px 24px', borderRadius: '24px', textDecoration: 'none', fontWeight: 600, boxShadow: '0 8px 16px rgba(34, 197, 94, 0.3)', transition: 'transform 0.2s' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
-                Physics Department IITD <ExternalLink size={16} />
+              <a href="https://opc.iitd.ac.in/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#0033cc', color: '#fff', padding: '12px 24px', borderRadius: '24px', textDecoration: 'none', fontWeight: 600, boxShadow: '0 8px 16px rgba(0, 51, 204, 0.3)', transition: 'transform 0.2s' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
+                Optics & Photonics Centre <ExternalLink size={16} />
               </a>
             </div>
           </div>

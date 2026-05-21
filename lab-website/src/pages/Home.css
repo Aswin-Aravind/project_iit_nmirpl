@@ -4,24 +4,44 @@
     overflow: hidden;
 }
 
-.home-bg-logo {
+.home-bg-logo-container {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: auto;
+    width: 70vh;
     height: 70vh;
     max-width: 90vw;
-    object-fit: contain;
-    opacity: 0.12;
-    animation: rotateLogo 80s linear infinite;
+    max-height: 90vw;
     z-index: 0;
     pointer-events: none;
+    opacity: 0.12;
 }
 
-@keyframes rotateLogo {
-    from { transform: translate(-50%, -50%) rotate(0deg); }
-    to { transform: translate(-50%, -50%) rotate(360deg); }
+.home-bg-logo-outer, .home-bg-logo-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.home-bg-logo-outer {
+    -webkit-mask-image: radial-gradient(circle, transparent 45.5%, black 46%);
+    mask-image: radial-gradient(circle, transparent 45.5%, black 46%);
+    animation: rotateLogoOuter 80s linear infinite;
+}
+
+.home-bg-logo-inner {
+    /* Mask out the outer ring so only the stationary inner emblem is visible */
+    -webkit-mask-image: radial-gradient(circle, black 45.5%, transparent 46%);
+    mask-image: radial-gradient(circle, black 45.5%, transparent 46%);
+}
+
+@keyframes rotateLogoOuter {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
 .hero {
