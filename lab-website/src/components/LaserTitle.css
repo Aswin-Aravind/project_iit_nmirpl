@@ -3,6 +3,8 @@
     position: relative;
     line-height: inherit;
     white-space: normal;
+    font-family: 'Calligrapher', cursive;
+    font-size: 1.2em; /* Calligraphy fonts usually need to be a bit larger */
 }
 
 .laser-char {

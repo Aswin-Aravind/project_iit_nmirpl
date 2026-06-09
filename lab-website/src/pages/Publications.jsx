@@ -63,7 +63,7 @@ export default function Publications() {
             <h3 style={{ fontSize: '1.2rem', marginBottom: '8px', lineHeight: '1.4', color: '#0f172a' }}>{pub.title}</h3>
           </div>
           <div style={{ width: '120px', textAlign: 'right', flexShrink: 0 }}>
-            <span style={{ fontWeight: '700', color: 'var(--accent-primary)', fontSize: '1.1rem', background: 'rgba(37, 99, 235, 0.1)', padding: '6px 16px', borderRadius: '16px' }}>{pub.year}</span>
+            <span style={{ fontWeight: '700', color: 'var(--accent-primary)', fontSize: '1.1rem', background: 'rgba(179, 27, 27, 0.1)', padding: '6px 16px', borderRadius: '16px' }}>{pub.year}</span>
           </div>
         </div>
       );
@@ -152,7 +152,7 @@ export default function Publications() {
           {(filter === 'All' || filter === 'Journals') && (
             <div style={{ marginBottom: '60px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px' }}>
-                <div style={{ padding: '12px', background: 'rgba(37, 99, 235, 0.1)', borderRadius: '12px' }}><BookOpen size={24} style={{ color: 'var(--accent-primary)' }} /></div>
+                <div style={{ padding: '12px', background: 'rgba(179, 27, 27, 0.1)', borderRadius: '12px' }}><BookOpen size={24} style={{ color: 'var(--accent-primary)' }} /></div>
                 <h2 style={{ fontSize: '1.8rem', color: '#0f172a' }}>Journals</h2>
               </div>
               <div style={viewMode === 'grid' ? { display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 320px), 1fr))', gap: '24px' } : { display: 'flex', flexDirection: 'column' }}>
@@ -164,7 +164,7 @@ export default function Publications() {
           {(filter === 'All' || filter === 'Conferences') && (
             <div style={{ marginBottom: '60px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px' }}>
-                <div style={{ padding: '12px', background: 'rgba(37, 99, 235, 0.1)', borderRadius: '12px' }}><FileText size={24} style={{ color: 'var(--accent-primary)' }} /></div>
+                <div style={{ padding: '12px', background: 'rgba(179, 27, 27, 0.1)', borderRadius: '12px' }}><FileText size={24} style={{ color: 'var(--accent-primary)' }} /></div>
                 <h2 style={{ fontSize: '1.8rem', color: '#0f172a' }}>Conferences</h2>
               </div>
               <div style={viewMode === 'grid' ? { display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 320px), 1fr))', gap: '24px' } : { display: 'flex', flexDirection: 'column' }}>
@@ -176,7 +176,7 @@ export default function Publications() {
           {filter === 'All' && (
             <div style={{ marginBottom: '60px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px' }}>
-                <div style={{ padding: '12px', background: 'rgba(37, 99, 235, 0.1)', borderRadius: '12px' }}><Bookmark size={24} style={{ color: 'var(--accent-primary)' }} /></div>
+                <div style={{ padding: '12px', background: 'rgba(179, 27, 27, 0.1)', borderRadius: '12px' }}><Bookmark size={24} style={{ color: 'var(--accent-primary)' }} /></div>
                 <h2 style={{ fontSize: '1.8rem', color: '#0f172a' }}>Other (Book Chapters)</h2>
               </div>
               <div style={viewMode === 'grid' ? { display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 320px), 1fr))', gap: '24px' } : { display: 'flex', flexDirection: 'column' }}>

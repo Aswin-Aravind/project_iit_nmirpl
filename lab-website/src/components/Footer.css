@@ -66,10 +66,15 @@
     color: var(--text-secondary);
     font-size: 0.95rem;
     transition: var(--transition);
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-left: -12px;
 }
 
 .footer-quick-links a:hover {
     color: var(--accent-primary);
+    background: rgba(179, 27, 27, 0.05);
 }
 
 .footer-bottom {
@@ -84,6 +89,6 @@
 @media (max-width: 768px) {
     .footer-grid {
         grid-template-columns: 1fr;
-        padding: 24px 0;
+        padding: 24px 16px;
     }
 }

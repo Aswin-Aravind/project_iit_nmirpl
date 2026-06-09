@@ -15,7 +15,7 @@ export default function Home() {
             <section className="hero">
                 <div className="container hero-content">
                     <h1 className="hero-title">
-                        <LaserTitle text="Near and Mid-IR Photonics&#10;Laboratory" />
+                        <LaserTitle text={"Near and Mid - IR\nPhotonics Laboratory"} />
                     </h1>
                     <p className="hero-tagline">Advancing the frontiers of fiber lasers, mid-IR optics, and photonic sensors at IIT Delhi.</p>
                     <div className="hero-actions">

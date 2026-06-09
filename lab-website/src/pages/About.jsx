@@ -13,7 +13,7 @@ export default function About() {
         {
             name: "Prof. Gayathri Bharathan",
             title: "Principal Investigator",
-            email: "gbharathan@iitd.ac.in",
+            email: "gayathrib@iitd.ac.in",
             img: gaayuPic
         },
         {
@@ -47,13 +47,13 @@ export default function About() {
                     </p>
 
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '32px' }}>
-                        <div style={{ background: 'rgba(37, 99, 235, 0.05)', padding: '24px', borderRadius: '16px', border: '1px solid rgba(37, 99, 235, 0.1)' }}>
+                        <div style={{ background: 'rgba(179, 27, 27, 0.05)', padding: '24px', borderRadius: '16px', border: '1px solid rgba(179, 27, 27, 0.1)' }}>
                             <h3 style={{ color: 'var(--accent-primary)', marginBottom: '16px', fontSize: '1.3rem' }}>Current Research Topics</h3>
                             <p style={{ color: 'var(--text-secondary)', lineHeight: '1.7' }}>
                                 Design and fabrication of fiberized integrated components for all-fiber laser cavities. Development of all-fiber CW and pulsed laser sources in the near and mid-IR wavelengths.
                             </p>
                         </div>
-                        <div style={{ background: 'rgba(37, 99, 235, 0.05)', padding: '24px', borderRadius: '16px', border: '1px solid rgba(37, 99, 235, 0.1)' }}>
+                        <div style={{ background: 'rgba(179, 27, 27, 0.05)', padding: '24px', borderRadius: '16px', border: '1px solid rgba(179, 27, 27, 0.1)' }}>
                             <h3 style={{ color: 'var(--accent-primary)', marginBottom: '16px', fontSize: '1.3rem' }}>Ongoing Work</h3>
                             <ul style={{ color: 'var(--text-secondary)', lineHeight: '1.7', paddingLeft: '20px', listStyleType: 'disc' }}>
                                 <li style={{ marginBottom: '12px' }}>Working on a DRDO funded project, aiming to develop source of 2 and 4 µm wavelength for counter-measure purposes.</li>

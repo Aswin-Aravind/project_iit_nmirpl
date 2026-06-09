@@ -54,7 +54,14 @@ export default function Contact() {
                 <Phone color="var(--accent-primary)" size={28} style={{ flexShrink: 0 }} />
                 <div>
                   <h4 style={{ color: 'var(--text-primary)', fontSize: '1.1rem', marginBottom: '4px' }}>Phone</h4>
-                  <p style={{ color: 'var(--text-secondary)' }}>011-265913583</p>
+                  <a 
+                    href="tel:011-265913583" 
+                    style={{ color: 'var(--text-secondary)', textDecoration: 'none', transition: 'color 0.2s' }}
+                    onMouseEnter={(e) => e.target.style.color = 'var(--accent-primary)'}
+                    onMouseLeave={(e) => e.target.style.color = 'var(--text-secondary)'}
+                  >
+                    011-265913583
+                  </a>
                 </div>
               </div>
             </div>

@@ -18,7 +18,7 @@
     border-radius: 50%;
     overflow: hidden;
     border: 4px solid var(--accent-primary);
-    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 10px 30px rgba(179, 27, 27, 0.3);
 }
 
 .pi-image {

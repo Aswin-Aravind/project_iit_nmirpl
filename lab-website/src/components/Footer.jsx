@@ -18,8 +18,18 @@ export default function Footer() {
                         <h4 className="footer-subtitle">Contact</h4>
                         <ul className="footer-links">
                             <li><MapPin size={18} /> NMIRPL, Optics & Photonics Centre, IIT Delhi, Hauz Khas, New Delhi - 110016, India</li>
-                            <li><Mail size={18} /> gayathrib@iitd.ac.in</li>
-                            <li><Phone size={18} /> 011-265913583</li>
+                            <li>
+                                <Mail size={18} /> 
+                                <a href="mailto:gayathrib@iitd.ac.in" style={{ transition: 'color 0.2s' }} onMouseEnter={(e) => e.target.style.color = 'var(--accent-primary)'} onMouseLeave={(e) => e.target.style.color = 'inherit'}>
+                                    gayathrib@iitd.ac.in
+                                </a>
+                            </li>
+                            <li>
+                                <Phone size={18} /> 
+                                <a href="tel:011-265913583" style={{ transition: 'color 0.2s' }} onMouseEnter={(e) => e.target.style.color = 'var(--accent-primary)'} onMouseLeave={(e) => e.target.style.color = 'inherit'}>
+                                    011-265913583
+                                </a>
+                            </li>
                         </ul>
                     </div>
 

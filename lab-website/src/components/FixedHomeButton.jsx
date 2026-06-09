@@ -44,7 +44,7 @@ export default function FixedHomeButton() {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                boxShadow: '0 4px 12px rgba(37, 99, 235, 0.4)',
+                boxShadow: '0 4px 12px rgba(179, 27, 27, 0.4)',
                 zIndex: 9999,
                 border: 'none',
                 cursor: 'pointer',
@@ -52,11 +52,11 @@ export default function FixedHomeButton() {
             }}
             onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-4px)';
-                e.currentTarget.style.boxShadow = '0 8px 24px rgba(37, 99, 235, 0.6)';
+                e.currentTarget.style.boxShadow = '0 8px 24px rgba(179, 27, 27, 0.6)';
             }}
             onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = '0 4px 12px rgba(37, 99, 235, 0.4)';
+                e.currentTarget.style.boxShadow = '0 4px 12px rgba(179, 27, 27, 0.4)';
             }}
             aria-label="Back to Top"
             title="Back to Top"

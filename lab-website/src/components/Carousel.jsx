@@ -7,7 +7,7 @@ import img3 from '../assets/Gayathri_3.jpg';
 import img4 from '../assets/Gayathri_4.jpg';
 import img5 from '../assets/Gayathri_5.jpg';
 import imgGroup from '../assets/Gayathri_group.jpg';
-import opcLogo from '../assets/OPC LOGO (1).jpg';
+import opcLogo from '../assets/OPC_LOGO_no_bg.png';
 
 const images = [opcLogo, imgGroup, img1, img2, img3, img4, img5];
 

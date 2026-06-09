@@ -33,7 +33,7 @@ export default function PremiumWhiteCanvas() {
             vx: (Math.random() - 0.5) * 0.5,
             vy: (Math.random() - 0.5) * 0.5,
             r: Math.random() * 3 + 1,
-            color: `rgba(59, 130, 246, ${Math.random() * 0.3 + 0.1})` // Blue accent
+            color: `rgba(179, 27, 27, ${Math.random() * 0.3 + 0.1})` // Red accent
         }));
 
         const maxDistance = 150;
@@ -77,7 +77,7 @@ export default function PremiumWhiteCanvas() {
 
                     if (dist < maxDistance) {
                         const alpha = (1 - dist / maxDistance) * 0.2;
-                        ctx.strokeStyle = `rgba(59, 130, 246, ${alpha})`;
+                        ctx.strokeStyle = `rgba(179, 27, 27, ${alpha})`;
                         ctx.beginPath();
                         ctx.moveTo(p1.x, p1.y);
                         ctx.lineTo(p2.x, p2.y);
@@ -97,9 +97,9 @@ export default function PremiumWhiteCanvas() {
             // Add some "laser" accent lines scanning slowly through the background
             const laserY = (Math.sin(t * 0.5) * 0.5 + 0.5) * canvas.height;
             const laserGrad = ctx.createLinearGradient(0, laserY - 50, 0, laserY + 50);
-            laserGrad.addColorStop(0, 'rgba(59, 130, 246, 0)');
-            laserGrad.addColorStop(0.5, 'rgba(59, 130, 246, 0.05)');
-            laserGrad.addColorStop(1, 'rgba(59, 130, 246, 0)');
+            laserGrad.addColorStop(0, 'rgba(179, 27, 27, 0)');
+            laserGrad.addColorStop(0.5, 'rgba(179, 27, 27, 0.05)');
+            laserGrad.addColorStop(1, 'rgba(179, 27, 27, 0)');
             
             ctx.fillStyle = laserGrad;
             ctx.fillRect(0, laserY - 50, canvas.width, 100);

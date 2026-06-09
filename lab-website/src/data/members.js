@@ -23,7 +23,7 @@ export const members = {
         workExperience: [
             { role: "Assistant Professor", institution: "Indian Institute of Technology (IIT) Delhi, India", period: "April 2023 – Present" },
             { role: "Guest Researcher", institution: "University of Tokyo, Japan", period: "Feb 2025 – April 2025" },
-            { role: "Research Scientist", institution: "Macquarie University, Sydney, Australia", period: "Aug 2024 - Present" },
+            { role: "Research Scientist", institution: "Macquarie University, Sydney, Australia", period: "Aug 2024 - Oct 2025" },
             { role: "Research Scientist (Post-doctoral Fellow)", institution: "EPFL, Switzerland", period: "April 2021 - Feb 2023" }
         ],
         skills: [

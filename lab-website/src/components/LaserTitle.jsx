@@ -77,7 +77,7 @@ export default function LaserTitle({ text, className = '' }) {
                     ref={el => (charRefs.current[i] = el)}
                     className={`laser-char ${i < revealed ? 'visible' : 'hidden'} ${ch === '\n' ? 'line-break' : ''}`}
                 >
-                    {ch === ' ' ? '\u00A0' : ch === '\n' ? <br /> : ch}
+                    {ch === '\n' ? <br /> : ch}
                 </span>
             ))}
         </span>

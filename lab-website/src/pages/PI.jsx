@@ -99,8 +99,8 @@ export default function PI() {
 
             <div className="pi-info">
               <h2>{pi.name}</h2>
-              <h3 className="pi-title" style={{ fontSize: '1.2rem', marginBottom: '20px' }}>
-                <a href="https://opc.iitd.ac.in/faculty/prof-gayathri-bharathan" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.2s', borderBottom: '1px solid rgba(0,0,0,0.1)' }} onMouseEnter={(e) => e.target.style.color = 'var(--accent-primary)'} onMouseLeave={(e) => e.target.style.color = 'inherit'}>
+              <h3 className="pi-title" style={{ fontSize: '1.2rem', marginBottom: '20px', color: '#0099ff', textShadow: '0 0 8px rgba(0, 153, 255, 0.3)' }}>
+                <a href="https://opc.iitd.ac.in/faculty/prof-gayathri-bharathan" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.2s', borderBottom: '1px solid rgba(0, 153, 255, 0.4)' }} onMouseEnter={(e) => e.target.style.color = '#0077ee'} onMouseLeave={(e) => e.target.style.color = 'inherit'}>
                   {pi.title} (Optics and Photonics Center, IIT Delhi)
                 </a>
               </h3>
