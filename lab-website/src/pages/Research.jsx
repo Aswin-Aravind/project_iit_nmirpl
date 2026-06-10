@@ -12,7 +12,7 @@ export default function Research() {
     },
     {
       title: "Photonic Sensors",
-      desc: "Creating highly sensitive, fiber-based compact sensors for environmental monitoring and trace gas detection.",
+      desc: "Creating highly sensitive, fiber-based compact sensors for healthcare, environmental monitoring and trace gas detection.",
       icon: <Target size={32} />
     },
     {
