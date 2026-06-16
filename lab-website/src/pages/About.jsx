@@ -7,6 +7,8 @@ import gaayuPic from '../assets/Gaayu_Pic.jpg';
 import archanaPic from '../assets/Archana.jpg';
 import bhanuPic from '../assets/Bhanu IMG.jpeg';
 import anjaliPic from '../assets/Anjali.jpg';
+import renukaPic from '../assets/Renuka Ubba.jpg';
+import priyanshuPic from '../assets/Priyanshu_Tripathi.jpg';
 
 export default function About() {
     const teamMembers = [
@@ -33,6 +35,18 @@ export default function About() {
             title: "PhD Scholar",
             email: "anjalinehra1999@gmail.com",
             img: anjaliPic
+        },
+        {
+            name: "Ms. Renuka Ubba",
+            title: "PhD Scholar",
+            email: "ubbarenuka2003@gmail.com",
+            img: renukaPic
+        },
+        {
+            name: "Mr. Priyanshu Tripathi",
+            title: "Internship Student",
+            email: "tripathipriyanshu526@gmail.com",
+            img: priyanshuPic
         }
     ];
 
