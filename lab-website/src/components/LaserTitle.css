@@ -27,8 +27,8 @@
 /* ── WRITING & HOLDING PHASES: Letters stay RED through completion ── */
 .phase-writing .laser-char.visible,
 .phase-holding .laser-char.visible {
-    color: var(--accent-primary);
-    text-shadow: 0 0 8px rgba(179, 27, 27, 0.6);
+    color: var(--accent-hover);
+    text-shadow: none;
 }
 
 /* ── FADING PHASE: Everything fades out together ── */

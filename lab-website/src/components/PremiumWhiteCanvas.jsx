@@ -94,16 +94,7 @@ export default function PremiumWhiteCanvas() {
                 ctx.fill();
             });
             
-            // Add some "laser" accent lines scanning slowly through the background
-            const laserY = (Math.sin(t * 0.5) * 0.5 + 0.5) * canvas.height;
-            const laserGrad = ctx.createLinearGradient(0, laserY - 50, 0, laserY + 50);
-            laserGrad.addColorStop(0, 'rgba(179, 27, 27, 0)');
-            laserGrad.addColorStop(0.5, 'rgba(179, 27, 27, 0.05)');
-            laserGrad.addColorStop(1, 'rgba(179, 27, 27, 0)');
             
-            ctx.fillStyle = laserGrad;
-            ctx.fillRect(0, laserY - 50, canvas.width, 100);
-
         };
 
         animFrameId = requestAnimationFrame(loop);
