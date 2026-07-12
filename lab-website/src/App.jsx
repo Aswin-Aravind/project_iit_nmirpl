@@ -21,8 +21,8 @@ import Research from './pages/Research';
 import Teaching from './pages/Teaching';
 
 function App() {
-    // Show intro on every page load
-    const [showIntro, setShowIntro] = useState(true);
+    // Show intro only on initial load of the homepage
+    const [showIntro, setShowIntro] = useState(window.location.pathname === '/');
 
     return (
         <Router>
